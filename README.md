@@ -8,15 +8,19 @@ A framework for presenting coding challenges where participants implement algori
 2. Set up a server connected to a TV-screen to show the battle-grounds
 3. Provide a link and explain the challenge to the participants.
 
+## Demo
+
+[Playing Gomoku](assets/gomoku.gif)
+
+A 3 player game of Gomoku (5 in a row)
 
 ## How to set up a challenge
 
 Prerequisites: rust
 
 1. Clone this repo
-2. cargo run --list-games
-3. cargo run --game spy-master # For example
-4. A UI should pop up, place it on a screen visible to all participants
+2. cargo run
+3. A UI should pop up, place it on a screen visible to all participants
 
 ## How to solve a challenge
 
@@ -26,6 +30,7 @@ Start from scratch, or use one of the sample starters below.
 
 For the participants, every challenge has roughly the same structure.
 
+```text
 1. Connect to the server (The host should have provided you with IP:port)
 2. Provide a username (See [authentication message](#auth) below)
 3. ╭─╭─ The server will send the state of the world [your turn](#your-turn)
@@ -33,6 +38,7 @@ For the participants, every challenge has roughly the same structure.
 5. | ╰─ Repeat from step 3
 6. |  The server will announce a winner when the game is over [game ends](#game-over)
 7. ╰─ Repeat from step 3
+```
 
 For specifics on your particular game, go to the game-specific section here:
 
@@ -48,7 +54,7 @@ First message that is sent upon client connection.
 
 The password below is set the first time you connect, and you should reuse the same username/password connection on every connection after that.
 
-> Server -> Client
+> Client -> Server
 
 ```json
 {"auth":
