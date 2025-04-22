@@ -10,7 +10,7 @@ A framework for presenting coding challenges where participants implement algori
 
 ## Demo
 
-[Playing Gomoku](assets/gomoku.gif)
+![Playing Gomoku](assets/gomoku.gif)
 
 A 3 player game of Gomoku (5 in a row)
 
